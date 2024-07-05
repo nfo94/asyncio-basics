@@ -20,13 +20,13 @@ asynchronous operations. It can be paused and resumed at `await` points, allowin
 during its idle time. Coroutines are a fundamental part of Python's asyncio library, enabling
 concurrent execution of code. They are used for IO-bound and high-level structured network code.
 
-📌 "asyncio exploits the fact that I/O operations release the GIL to give us concurrency, even with
+📌 "_asyncio exploits the fact that I/O operations release the GIL to give us concurrency, even with
 only one thread. When we utilize asyncio we create objects called coroutines. A coroutine can be
 thought of as executing a lightweight thread. Much like we can have multiple threads running at the
 same time, each with their own concurrent I/O operation, we can have many coroutines running
 alongside one another. While we are waiting for our I/O-bound coroutines to finish, we can still
 execute other Python code, thus, giving us concurrency. It is important to note that asyncio does
-not circumvent the GIL, and we are still subject to it."
+not circumvent the GIL, and we are still subject to it._"
 
 Excerpt from [Python Concurrency with asyncio](https://www.amazon.com/Python-Concurrency-asyncio-Matthew-Fowler/dp/1617298662/ref=sr_1_1_sspa?crid=2QKFJ9WRYTPTU&dib=eyJ2IjoiMSJ9.PAOxJ9P-R3rVThT5b9VxApqAYGsuubdy5PE_tiwNukG3yilr2Aqe2YYjMRzrQnQHHmDqyPb5ClA_rgVS-0hMUfTXm5MElm11M_27Vc6tDvWwR3zHKiWedxDt6XiQGCZUEYo3ogEz27TSCXsyDHhQQnqRRpiDrUisjI0u3pj-H74e-NQz2DztIZN1eBiD8D7hQ44HDGk0DBUUUbbc3wRrAoht_fqSDsOpCE25aHlEBHY.o8obhSS_gX0jJfdV45SovZXROWoQHa-pLgQefeb-mLA&dib_tag=se&keywords=concurrency+python&qid=1720082291&sprefix=concurrency+pytho%2Caps%2C173&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
 by Matthew Fowler.
