@@ -7,6 +7,23 @@ Overview of concurrency, using Python as language:
 
 ![concurrency](./concurrency.png)
 
+📌 Process:
+
+📌 Thread:
+
+📌 I/O bound:
+
+📌 CPU bound:
+
+📌 Concurrency:
+
+📌 Parallelism:
+
+📌 GIL:
+
+📌 Because of Python's GIL, we still won't have a process running more than one thread at the same
+time, since the threads needs to acquire the GIL one at a time.
+
 📌 The **event loop** is a core concept in asynchronous programming, a design pattern, acting as the
 central executor in an asyncio-based application. It manages and distributes the execution of
 different tasks, allowing for asynchronous tasks and callbacks to be executed, network IO operations
@@ -20,7 +37,7 @@ asynchronous operations. It can be paused and resumed at `await` points, allowin
 during its idle time. Coroutines are a fundamental part of Python's asyncio library, enabling
 concurrent execution of code. They are used for IO-bound and high-level structured network code.
 
-📌 "_asyncio exploits the fact that I/O operations release the GIL to give us concurrency, even with
+📌 "_**asyncio** exploits the fact that I/O operations release the GIL to give us concurrency, even with
 only one thread. When we utilize asyncio we create objects called coroutines. A coroutine can be
 thought of as executing a lightweight thread. Much like we can have multiple threads running at the
 same time, each with their own concurrent I/O operation, we can have many coroutines running
@@ -117,7 +134,3 @@ loop.close()
 The loop must not be running when this function is called. Any pending callbacks will be discarded.
 This method clears all queues and shuts down the executor, but does not wait for the executor to
 finish.
-
-### [Coroutines and tasks](https://docs.python.org/3/library/asyncio-task.html)
-
-### [Futures](https://docs.python.org/3/library/asyncio-future.html)
